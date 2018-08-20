@@ -1,5 +1,5 @@
 # Notes
 
-| Ⅰ | Ⅱ | Ⅲ |
+| Ⅰ       |        Ⅱ         |  Ⅲ |
 | :--------: | :---------: | :---------: |
-| 算法[:pencil2:](#算法-pencil2)|数据库[:floppy_disk:](#数据库-floppy_disk)| Java [:coffee:](#java-coffee)|
+| 算法[:bomb:](#算法-bomb)|数据库[:closed_book:](#数据库-closed_book)| Java [:coffee:](#java-coffee)|
