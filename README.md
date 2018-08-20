@@ -4,7 +4,7 @@
 | :---------: | :---------: | :---------: |
 | 算法[:bomb:](#算法-bomb)|数据库[:closed_book:](#数据库-closed_book)| Java [:coffee:](#java-coffee)|
 
-## 算法 :pencil2:
+## 算法 :bomb:
 
 - [排序](https://github.com/Bihanghang/Notes/notes/排序.md)
 
