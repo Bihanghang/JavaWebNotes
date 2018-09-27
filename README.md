@@ -4,6 +4,10 @@
 | :---------: | :---------: | :---------: | :---------: |
 | 算法[:bomb:](#算法-bomb)|数据库[:closed_book:](#数据库-closed_book)| Java [:coffee:](#java-coffee)| 前端 [:pencil2:](#前端-pencil2)|
 
+## Java :coffee:
+
+- [多态](https://github.com/Bihanghang/Notes/tree/master/notes/Polymorphic.md)
+
 ## 算法 :bomb:
 
 - [排序](https://github.com/Bihanghang/Notes/tree/master/notes/排序.md)
