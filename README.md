@@ -7,6 +7,8 @@
 ## Java :coffee:
 
 - [多态](https://github.com/Bihanghang/Notes/tree/master/notes/Polymorphic.md)
+- [类加载顺序](https://github.com/Bihanghang/Notes/tree/master/notes/LoadOrder.md)
+- [比较器](https://github.com/Bihanghang/Notes/tree/master/notes/Compare.md)
 
 ## 算法 :bomb:
 
