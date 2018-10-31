@@ -11,12 +11,14 @@
 
   几种常见的排序
 
+- [TopK](https://github.com/Bihanghang/Notes/tree/master/notes/TopK.md)
+
 - [Leetcode 题解](https://github.com/Bihanghang/Notes/tree/master/notes/leetcode.md)
 
   对每种题型的解题思路做了总结。
 
 ## 数据库 :closed_book:
-- [连接方式](https://blog.csdn.net/fly_zxy/article/details/53954377)
+- [Oracle连接方式](https://blog.csdn.net/fly_zxy/article/details/53954377)
 
 ## Java :coffee:
 
