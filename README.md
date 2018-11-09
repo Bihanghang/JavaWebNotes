@@ -15,8 +15,6 @@
 
 - [Leetcode 题解](https://github.com/Bihanghang/Notes/tree/master/notes/leetcode.md)
 
-  对每种题型的解题思路做了总结。
-
 ## 数据库 :closed_book:
 - [Oracle连接方式](https://blog.csdn.net/fly_zxy/article/details/53954377)
 - [查询案列](https://github.com/Bihanghang/Notes/tree/master/notes/数据库/oracleCases.md)
