@@ -7,11 +7,11 @@
 
 ## 算法 :bomb:
 
-- [排序](https://github.com/Bihanghang/Notes/tree/master/notes/排序.md)
+- [排序](https://github.com/Bihanghang/Notes/tree/master/notes/算法/排序.md)
 
-  几种常见的排序
+- [TopK](https://github.com/Bihanghang/Notes/tree/master/notes/算法/TopK.md)
 
-- [TopK](https://github.com/Bihanghang/Notes/tree/master/notes/TopK.md)
+- [TowerOfHanoi](https://github.com/Bihanghang/Notes/tree/master/notes/算法/TowerOfHanoi.md)
 
 - [Leetcode 题解](https://github.com/Bihanghang/Notes/tree/master/notes/leetcode.md)
 
@@ -19,14 +19,15 @@
 
 ## 数据库 :closed_book:
 - [Oracle连接方式](https://blog.csdn.net/fly_zxy/article/details/53954377)
-
+- [查询案列](https://github.com/Bihanghang/Notes/tree/master/notes/数据库/oracleCases.md)
 ## Java :coffee:
 
-- [多态](https://github.com/Bihanghang/Notes/tree/master/notes/Polymorphic.md)
-- [类加载顺序](https://github.com/Bihanghang/Notes/tree/master/notes/LoadOrder.md)
-- [比较器](https://github.com/Bihanghang/Notes/tree/master/notes/Compare.md)
-- [Java虚拟机](https://github.com/Bihanghang/Notes/tree/master/notes/JVMNotes.md)
-- [Java核心编程](https://github.com/Bihanghang/Notes/tree/master/notes/javaCore.md)
+- [多态](https://github.com/Bihanghang/Notes/tree/master/notes/Java/Polymorphic.md)
+- [类加载顺序](https://github.com/Bihanghang/Notes/tree/master/notes/Java/LoadOrder.md)
+- [比较器](https://github.com/Bihanghang/Notes/tree/master/notes/Java/Compare.md)
+- [Java虚拟机](https://github.com/Bihanghang/Notes/tree/master/notes/Java/JVMNotes.md)
+- [Java核心编程](https://github.com/Bihanghang/Notes/tree/master/notes/Java/javaCore.md)
 
 ## 前端 :pencil2:
-- [CSS](https://github.com/Bihanghang/Notes/tree/master/notes/CSS.md)
+- [CSS](https://github.com/Bihanghang/Notes/tree/master/notes/前端/CSS.md)
+- [HTML](https://github.com/Bihanghang/Notes/tree/master/notes/前端/HTML.md)
