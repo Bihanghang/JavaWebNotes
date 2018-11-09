@@ -11,6 +11,7 @@
 ## 数据库 :closed_book:
 - [Oracle连接方式](https://blog.csdn.net/fly_zxy/article/details/53954377)
 - [查询案列](https://github.com/Bihanghang/Notes/tree/master/notes/数据库/oracleCases.md)
+- [数据库基本概念](https://github.com/Bihanghang/Notes/tree/master/notes/数据库/数据库基本概念.md)
 ## Java :coffee:
 - [多态](https://github.com/Bihanghang/Notes/tree/master/notes/Java/Polymorphic.md)
 - [类加载顺序](https://github.com/Bihanghang/Notes/tree/master/notes/Java/LoadOrder.md)
