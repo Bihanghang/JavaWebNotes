@@ -1,25 +1,17 @@
 # JavaWebNotes
-
 |Ⅰ| Ⅱ| Ⅲ | Ⅳ |
 | :---------: | :---------: | :---------: | :---------: |
 | 算法[:bomb:](#算法-bomb)|数据库[:closed_book:](#数据库-closed_book)| Java [:coffee:](#java-coffee)| 前端 [:pencil2:](#前端-pencil2)|
 
-
 ## 算法 :bomb:
-
 - [排序](https://github.com/Bihanghang/Notes/tree/master/notes/算法/排序.md)
-
 - [TopK](https://github.com/Bihanghang/Notes/tree/master/notes/算法/TopK.md)
-
 - [TowerOfHanoi](https://github.com/Bihanghang/Notes/tree/master/notes/算法/TowerOfHanoi.md)
-
 - [Leetcode 题解](https://github.com/Bihanghang/Notes/tree/master/notes/leetcode.md)
-
 ## 数据库 :closed_book:
 - [Oracle连接方式](https://blog.csdn.net/fly_zxy/article/details/53954377)
 - [查询案列](https://github.com/Bihanghang/Notes/tree/master/notes/数据库/oracleCases.md)
 ## Java :coffee:
-
 - [多态](https://github.com/Bihanghang/Notes/tree/master/notes/Java/Polymorphic.md)
 - [类加载顺序](https://github.com/Bihanghang/Notes/tree/master/notes/Java/LoadOrder.md)
 - [比较器](https://github.com/Bihanghang/Notes/tree/master/notes/Java/Compare.md)
