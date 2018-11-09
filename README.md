@@ -27,7 +27,7 @@
 - [比较器](https://github.com/Bihanghang/Notes/tree/master/notes/Java/Compare.md)
 - [Java虚拟机](https://github.com/Bihanghang/Notes/tree/master/notes/Java/JVMNotes.md)
 - [Java核心编程](https://github.com/Bihanghang/Notes/tree/master/notes/Java/javaCore.md)
-
+- [单例模式](https://github.com/Bihanghang/Notes/tree/master/notes/Java/单例模式.md)
 ## 前端 :pencil2:
 - [CSS](https://github.com/Bihanghang/Notes/tree/master/notes/前端/CSS.md)
 - [HTML](https://github.com/Bihanghang/Notes/tree/master/notes/前端/HTML.md)
