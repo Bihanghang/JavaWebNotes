@@ -1,4 +1,37 @@
 面试题：用数组实现二叉树
-最开始的想法就是将数组从下标0开始按照完全二叉树填满，看书的时候发现很奇怪的是下标0的位置是空着的，
-长这样[](https://github.com/Bihanghang/Notes/tree/master/notes/img/arrToTree.PNG)
-这就很奇怪
+最开始的想法就是将数组从下标0开始按照完全二叉树填满，看书的时候发现很奇怪的是下标0的位置是空着的。
+
+![](https://raw.githubusercontent.com/Bihanghang/JavaWebNotes/master/notes/img/arrToTree.PNG)
+
+这就很奇怪,于是我就照着书上的代码写了第一个位置不为空的代码实现，如下:
+```java
+public class arrToTree {
+	private int[] arr = new int[10];
+	private int currentSize;
+	public void insert(int a){
+		int hole = currentSize++;
+		while (currentSize<arr.length&&a < arr[hole/2]) {
+			arr[hole] = arr[hole/2];
+			hole /=2;
+		}
+		arr[hole] = a;
+	}
+	public static void main(String[] args) {
+		arrToTree arrToTree = new arrToTree();
+		for(int i=8;i>0;i--)
+			arrToTree.insert(i);
+		System.out.println(Arrays.toString(arrToTree.arr));
+	}
+}
+```
+运行的时候才发现假如是正序插入，代码是没问题的，但是假如逆序插入，由于待插入数值始终小于根的值，程序陷入死循环。
+附上标准代码:
+
+![](https://raw.githubusercontent.com/Bihanghang/JavaWebNotes/master/notes/img/arrToTreeCode.PNG)
+
+数组第一个值等于插入的值，这样插入的值永远不会小于第一个值，保证循环肯定可以跳出，实在是妙。
+
+
+
+
+
