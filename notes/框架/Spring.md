@@ -1,9 +1,33 @@
 # 基本Spring框架
 <details>
-<summary>详细信息</summary>
-* [pom.xml](#pom.xml)
+<summary>配置文件信息</summary>
+
+* [`pom.xml`](#pom.xml)
+* [`spring.xml`](#spring.xml)
+* [`log4j.properties`](#log4j.properties)
+
 </details>
 
+### spring.xml
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-4.2.xsd">
+    
+    
+</beans>
+```
+[⬆ 回到顶部](#基本Spring框架)
+### log4j.properties
+```
+log4j.rootLogger=DEBUG, stdout
+log4j.appender.stdout=org.apache.log4j.ConsoleAppender
+log4j.appender.stdout.layout=org.apache.log4j.PatternLayout
+log4j.appender.stdout.layout.ConversionPattern=%c{1} - %m%n
+```
+[⬆ 回到顶部](#基本Spring框架)
 ### pom.xml
 ```
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"

@@ -1,64 +1,37 @@
 ```java
 class A {
-	public String show(D obj) {
+	public String show(B obj){
 		return ("A and D");
 	}
-
 	public String show(A obj) {
 		return ("A and A");
 	}
 }
-
 class B extends A {
 	public String show(B obj) {
 		return ("B and B");
 	}
-
 	public String show(A obj) {
 		return ("B and A");
 	}
 }
-
-class C extends B {
-}
-
-class D extends B {
-}
-
-public class Test {
+public class Test2 {
 	public static void main(String[] args) {
-		A a1 = new A();  
-	   
 		A a2 = new B();  
-	   
-		B b = new B();  
-	    C c = new C(); 
-	    D d = new D();
-	   
-        a1.show(b);
-        System.out.println(a1.show(b));
-        a1.show(c);
-        System.out.println(a1.show(c));
-	    a1.show(d); 
-        System.out.println(a1.show(d));
-		a2.show(b);//由于右边是B(),而且B()重写了方法，所以用子类的
-        System.out.println(a2.show(b));
-        System.out.println(a2.getClass());
-        a2.show(c); 
-		System.out.println(a2.show(c));
-		System.out.println(a2.show(d));
-		System.out.println(b.show(b));
-		System.out.println(b.show(c));
-		System.out.println(b.show(d));
-    }
+		System.out.println(a2.show(a2));//输出B and A
+		System.out.println(a2.getClass().getTypeName());//输出cn.bh.tt.B
+		/*总结:1.当A new出子类a2，a2的类型是B,所以调用show()方法时，会先在子类B里面找，
+		 * 如果找不到再去父类A里面找。
+		 * 2.最有意思的是a2调用了show(A obj)而不是show(B obj),应该是因为a2是由A new出来的所以在充当
+		 * 参数的时候会向上转型为A。
+		 * */
+	}
 }
 ```
 
 ```java
 class A{
-	
     public int i=7;//父类属性 i
-    
     public A(){    //父类无参构造器
 		print();
 	}			   //父类方法print()
@@ -67,11 +40,8 @@ class A{
         System.out.println("父类方法");
 	}
 }
-
 public class Polymorphic2 extends A{
-	
 	public int j=4;       //子类属性 j
-
 	public Polymorphic2(){ //子类无参构造器
         print();
 	}
@@ -79,9 +49,10 @@ public class Polymorphic2 extends A{
         System.out.println(j);
         System.out.println("子类方法");
 	}
-	
-	public static void main(String[] args) {
-		new Polymorphic2();//先默认隐式调用父类构造器，
+	public static void main(String[] args){
+		new Polymorphic2();
+		/*输出为0<br>4:子类先默认隐式调用父类构造器，由于print被子类重写，所以调用子类方法，但此时j是还没有初始化的，所以输出为0
+		*/
 	}
 }
 ```
