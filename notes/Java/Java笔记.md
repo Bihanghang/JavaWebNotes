@@ -80,7 +80,7 @@ bufferedWriter.close();
 * getName()返回此文件的名字
 * listFiles()返回此文件下的所有文件
 
-思想很简单，如果是文件则复制，如果是文件夹则先复制文件夹再递归一下文件夹下的所有文件，关键是用好getAbsolutePath()，getName()这两个方法。
+思想很简单，如果是文件则复制，如果是文件夹则先复制文件夹再递归一下源文件夹下的所有文件，关键是用好getAbsolutePath()，getName()这两个方法。
 ```java
 public class NotAnonymous{
 	public void copy(String src,String dest) throws IOException{
@@ -113,6 +113,48 @@ public class NotAnonymous{
 	}
 }
 ```
+# String,StringBuilder,StringBuffer
+String为字符串常量，StringBuilder和StringBuffer为字符串变量
+
+String对象一旦创建无法更改，StringBuilder和StringBuffer可以更改。
+
+String在 str="abc"+"cd"这种情况逼StringBuilder和StringBuffer快，引文就相当于str="abccd"，字符串常量池只创建了一个str字符串
+
+str = "abc";str+="cd"这种情况StringBuilder和StringBuffer快，因为相当于创建了"abc"和"abccd"两个字符串常量
+
+线程情况:
+
+String是不可变量，线程安全。
+
+StringBuilder线程不安全，StringBuffer线程安全。
+# 线程的生命周期六个状态
+* New(新创建)
+* Runnable(可运行)
+* Blocked(被阻塞)
+* Waiting(等待)
+* Timed Waiting(计时等待)
+* Terminated(被终止)
+## Runnable(可运行)
+记住，在任何给定时刻，二个可运行的线程可能正在运行也可能没有运行（这就是为什
+么将这个状态称为可运行而不是运行 )
+。
+## Waiting(等待)
+当线程等待另一个线程通知调度器一个条件时
+， 它自己进入等待状态 。 在调用 Object . wait 方法或 Thread . join 方法
+， 或者是等待 java ,
+util . concurrent 库中的 Lock 或 Condition 时 ， 就会出现这种情况
+。
+## Terminated(被终止)
+线程因如下两个原因之一而被终止 ：
+  * 因为`run`方法正常退出而自然死亡 。
+  * 因为一个没有捕获的异常终止了`run`方法而意外死亡 。
+
+# 线程的3种创建方式
+1.继承Thread类创建线程
+
+2.实现Runnable接口创建线程
+
+3.使用Callable和Future创建线程
 
 
 
