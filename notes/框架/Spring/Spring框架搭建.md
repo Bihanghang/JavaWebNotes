@@ -41,19 +41,18 @@ log4j.appender.stdout.layout.ConversionPattern=%c{1} - %m%n
 
   <name>springtest</name>
   <url>http://maven.apache.org</url>
-    <profiles>
-    <profile>
-        <activation>
-            <activeByDefault>true</activeByDefault>
-            <jdk>1.8</jdk>
-        </activation>
-        <properties>
-            <maven.compiler.source>1.8</maven.compiler.source>
-            <maven.compiler.target>1.8</maven.compiler.target>
-            <maven.compiler.compilerVersion>1.8</maven.compiler.compilerVersion>
-        </properties>
-    </profile>
-  </profiles>
+   <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

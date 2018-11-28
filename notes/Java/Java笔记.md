@@ -155,7 +155,31 @@ util . concurrent 库中的 Lock 或 Condition 时 ， 就会出现这种情况
 2.实现Runnable接口创建线程
 
 3.使用Callable和Future创建线程
+# ThreadLocal
+概括起来说，对于多线程资源共享的问题，同步机制采用了“以时间换空间”的方式：访问串行化，对象共享化。而ThreadLocal采用了“以空间换时间”的方式：访问并行化，对象独享化。前者仅提供一份变量，让不同的线程排队访问，而后者为每一个线程都提供了一份变量，因此可以同时访问而互不影响。
+## ThreadLocal的用法
+阿里巴巴 java 开发手册中推荐的 ThreadLocal 的用法：
+```
+public class DateUtil {
+    public static final ThreadLocal<DateFormat> threadLocal = new ThreadLocal<DateFormat>(){
+        @Override
+        protected DateFormat initialValue() {
+            return new SimpleDateFormat("yyyy-MM-dd");
+        }
+    };
+}
+```
+然后我们再要用到 DateFormat 对象的地方，这样调用：
 
+`DateUtils.df.get().format(new Date());`
+
+ThreadLocal 相当于每个线程A在创建的时候，已经为你创建好了一个 DateFormat，这个 DateFormat 在当前这个线程A中共享。其他线程B，再用到 DateFormat 的地方，也会创建一个 DateFormat 对象，这个对象会在线程 B 中共享，直到线程 B 结束。
+
+也就是说 ThreadLocal 的用法和我们自己 new 对象一样，然后将这个 new 的对象传递到各个方法中。但是到处传递的话，太麻烦了。这个时候，就应该用 ThreadLocal。
+
+因为数据源是公用的，所以将其设为ThreadLocal，其余线程就可以直接用了。
+
+如果要使用 ThreadLocal，通常定义为 private static 类型，在我看来最好是定义为 private static final 类型。
 
 
 

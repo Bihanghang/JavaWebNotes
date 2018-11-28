@@ -15,3 +15,14 @@
 	version="3.0">
 ```
 右击项目找到Maven->Update Project,点击更新。
+## @RunWith(SpringJUnit4ClassRunner.class)  // 此句报错
+将JUnit版本换为4.12版本
+## JoinPoint找不到包
+添加依赖
+```
+<dependency>
+<groupId>org.aspectj</groupId>
+<artifactId>aspectjweaver</artifactId>
+<version>1.8.6</version>
+</dependency>
+```

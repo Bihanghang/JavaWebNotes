@@ -16,6 +16,7 @@
 		</dependency>
   </dependencies>
 ```
+<font color=4>如果引入依赖的时候不加版本号，回到引入失败.</font>
 # VSCode安装java项目
 四个插件
 * Language Support for Java(TM) by Red Hat：通过 Eclipse ™ JDT Language Server 提供 Java 语言支持
