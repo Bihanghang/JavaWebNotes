@@ -9,3 +9,8 @@
 <packaging>war</packaging>
 ```
 注意添加`<packaging>war</packaging>`这句代码。
+
+## Idea热部署
+1.确保tomcat下工程项目名称后面有 exploded，如果没有将其移除，选择有这个的。
+
+2.`on ‘update‘ action：` `on frame deactication:`这两个选项都设为Update classes and resources。
