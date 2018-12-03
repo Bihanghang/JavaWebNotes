@@ -10,7 +10,7 @@
 ## Git多人协作
 找到想要新建项目的位置，打开Git Bush输入:
 ```
-git clone git@github.com:michaelliao/learngit.git
+git clone git@github.com:Bihanghang/JavaWebNotes.git
 ```
 默认情况下，只能看到本地的master分支。不信可以用git branch命令看看
 
@@ -19,9 +19,9 @@ git clone git@github.com:michaelliao/learngit.git
 git checkout -b dev
 git checkout -b dev origin/dev
 ```
-接下来就和之前一个工作点一样操作了
+上传项目
 ```
 git add env.txt
 git commit -m "add env"
-git push origin dev
+git push --set-upstream origin dev
 ```
