@@ -9,7 +9,7 @@
     *  [TopK](notes/算法/TopK.md)
     *  [排序](notes/算法/排序.md)
     *  [汉诺塔](notes/算法/汉诺塔.md)
-    *  [Leetcode 题解](https://github.com/Bihanghang/Notes/tree/master/notes/leetcode.md.md)
+    *  [Leetcode 题解](https://github.com/Bihanghang/JavaWebNotes/blob/master/docs/notes/leetcode.md)
 
 
 - 数据库 :closed_book:
