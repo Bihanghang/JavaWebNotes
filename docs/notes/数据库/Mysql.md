@@ -1,4 +1,5 @@
 ## limit与offset用法比较
+
 ```
 SELECT  
     keyword  
@@ -28,8 +29,11 @@ select * from table limit 5; --返回前5行
 
 select * from table limit 0,5; --同上，返回前5行
 ```
+
 ## 优化Limit的用法
+
 当一个查询语句偏移量offset很大的时候，如select * from table limit 10000,10 , 最好不要直接使用limit，而是先获取到offset的id后，再直接使用limit size来获取数据。效果会好很多。
+
 ```
 SELECT
     *
