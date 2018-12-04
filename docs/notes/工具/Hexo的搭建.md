@@ -1,9 +1,4 @@
----
-title: Hello World
-Tag：Hexo
----
-
-## Hexo的安装与初始化
+### Hexo的安装与初始化
 1.确保电脑已经安装`Node.js`，`Git`
 
 打开GUI Bash,输入以下代码安装Hexo:
@@ -16,7 +11,8 @@ hexo init <folder>
 cd <folder>
 npm install
 ```
-## 下载主题
+### 下载主题
+
 - 找到Hexo的主目录，将`themes`文件夹删掉。
 - 在此目录下打开`GUI Bash`,输入以下命令重新下载主题重新生成`themes`文件夹：
 ```
@@ -27,7 +23,7 @@ git clone https://github.com/iissnan/hexo-theme-next themes/next
 theme: next
 ```
 
-## 与Github相关联
+### 与Github相关联
 - 在Github上创建名字为XXX.github.io的项目，XXX为自己的github用户名。
 - 打开本地的MyBlog文件夹项目内的_config.yml配置文件，将其中的type设置为git
 ```
