@@ -181,7 +181,43 @@ ThreadLocal 相当于每个线程A在创建的时候，已经为你创建好了�
 
 如果要使用 ThreadLocal，通常定义为 private static 类型，在我看来最好是定义为 private static final 类型。
 
+# 回调
+回调(callback)是一种常见的程序设计模式。在这种模式中可以指出某个特定事件发<br>
+生时应该采取的动作.例如可以指出在按下鼠标或选择某个菜单项时应该采取什么行动.
 
+# java枚举的下标
+java中枚举下标值默认从0开始，可以用ordinal()这个方法获取下标值。
+```java
+public enum Sex {
+	MALE(1,"男"),FEMALE(2,"女");
+	private int id;
+	private String name;
+	private Sex(int id, String name) {
+		this.id = id;
+		this.name = name;
+	}
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public static Sex getSex(int id){
+		if (id==1) {
+			return MALE;
+		} else if (id==2) {
+			return FEMALE;
+		}
+		return null;
+	}
+}
+```
+而MALE(1,"男")中的1是MALE内部的属性值。
 
-
-
+枚举MALE就相当于一个对象，但注意Sex构造器是private，所以MALE只能通过set,get方法赋值取值。
