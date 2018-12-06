@@ -14,6 +14,7 @@ npm install
 ### 下载主题
 
 **1**. 找到Hexo的主目录，将**themes**文件夹删掉。
+
 **2**. 在此目录下打开**GUI Bash**,输入以下命令重新下载主题重新生成**themes**文件夹：
 
 ```
@@ -29,6 +30,7 @@ theme: next
 ### 与Github相关联
 
 **1**. 在Github上创建名字为XXX.github.io的项目，XXX为自己的github用户名。
+
 **2**. 打开本地的MyBlog文件夹项目内的_config.yml配置文件，将其中的type设置为git
 
 ```
