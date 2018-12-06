@@ -14,6 +14,8 @@
 
 </details>
 
+<br>
+
 <details>
 <summary>数据库 :closed_book:</summary>
 
@@ -25,6 +27,8 @@
 *  [数据库基本概念](notes/数据库/数据库基本概念.md)
 
 </details>
+
+<br>
 
 <details>
 <summary>JAVA的一些基本概念 :coffee:</summary>
@@ -40,6 +44,8 @@
 
 </details>
 
+<br>
+
 <details>
 <summary>前端 :pencil2:</summary>
 
@@ -51,6 +57,8 @@
 
 </details>
 
+<br>
+
 <details>
 <summary>SpringBoot :boot:</summary>
 
@@ -58,6 +66,8 @@
 *  [启动SpringBoot项目](notes/SpringBoot/启动SpringBoot项目.md)
 
 </details>
+
+<br>
 
 <details>
 <summary>工具 :dollar:</summary>
@@ -75,19 +85,29 @@
 
 </details>
 
-- 框架 :tshirt:
+<br>
 
-    *  [Mybatis基本概念](notes/框架/Mybatis/Mybatis基本概念.md)
-    *  [Mybatis类型处理器](notes/框架/Mybatis/Mybatis类型处理器.md)
-    *  [advisor标签](notes/框架/Spring/advisor标签.md)
-    *  [IOC](notes/框架/Spring/IOC.md)
-    *  [AOP](notes/框架/Spring/SpringAOP.md)
-    *  [Spring装配Bean](notes/框架/Spring/Spring装配Bean.md)
-    *  [Spring配置数据源](notes/框架/Spring/Spring配置数据源.md)
-    *  [拓展多数据源](notes/框架/Spring/使用Spring的AbstractRoutingDataSource类来进行拓展多数据源.md)
-    *  [日志](notes/框架/Spring/日志.md)
-    *  [配置文件详解](notes/框架/Spring/配置文件详解.md)
-    
-- Web相关 :guitar:
+<details>
+<summary>框架 :tshirt:</summary>
 
-    *  [Web相关](notes/框架/Web相关.md)
+*  [Mybatis基本概念](notes/框架/Mybatis/Mybatis基本概念.md)
+*  [Mybatis类型处理器](notes/框架/Mybatis/Mybatis类型处理器.md)
+*  [advisor标签](notes/框架/Spring/advisor标签.md)
+*  [IOC](notes/框架/Spring/IOC.md)
+*  [AOP](notes/框架/Spring/SpringAOP.md)
+*  [Spring装配Bean](notes/框架/Spring/Spring装配Bean.md)
+*  [Spring配置数据源](notes/框架/Spring/Spring配置数据源.md)
+*  [拓展多数据源](notes/框架/Spring/使用Spring的AbstractRoutingDataSource类来进行拓展多数据源.md)
+*  [日志](notes/框架/Spring/日志.md)
+*  [配置文件详解](notes/框架/Spring/配置文件详解.md)
+
+</details> 
+
+<br>
+
+<details>
+<summary>Web相关 :guitar:</summary>
+
+*  [Web相关](notes/框架/Web相关.md)
+
+</details> 
