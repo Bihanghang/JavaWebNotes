@@ -1,4 +1,4 @@
-- [**返回主目录索引**](https://bihanghang.github.io/JavaWebNotes/#/?id=javawebnotes)
+- [**返回主目录索引**](/)
 
 - JAVA的一些基本概念
 
