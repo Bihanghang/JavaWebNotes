@@ -12,6 +12,16 @@
     *  [Leetcode 题解](https://github.com/Bihanghang/JavaWebNotes/blob/master/docs/notes/leetcode.md)
 
 
+<details>
+<summary>算法2</summary>
+
+*  [完全二叉树的实现](notes/算法/完全二叉树的实现.md)
+*  [TopK](notes/算法/TopK.md)
+*  [排序](notes/算法/排序.md)
+*  [汉诺塔](notes/算法/汉诺塔.md)
+
+</details>
+
 - 数据库 :closed_book:
 
     *  [Mysql](notes/数据库/Mysql.md)
