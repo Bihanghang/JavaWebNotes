@@ -31,7 +31,7 @@ public class LogBeforeAdvice implements MethodBeforeAdvice {
 <bean id="logBeforeAdvice" class="com.elim.spring.aop.advice.LogBeforeAdvice" />
 ```
 ## around Advice
-```
+```java
 public class LogAroundAdvice implements MethodInterceptor {
 
 	@Override
@@ -50,7 +50,7 @@ public class LogAroundAdvice implements MethodInterceptor {
 }
 ```
 获取参数:
-```
+```java
 public class LogAroundAdvice implements MethodInterceptor {
 
 	@Override
@@ -68,6 +68,8 @@ public class LogAroundAdvice implements MethodInterceptor {
 
 }
 ```
+
+```xml
 <aop:config>
 	<aop:pointcut expression="bean(userService)" id="userServicePointcut"/>	
 	<aop:advisor advice-ref="logAroundAdvice" pointcut-ref="userServicePointcut"/>
