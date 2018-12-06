@@ -32,5 +32,7 @@ classpath和classpath*区别：
 * classpath*：不仅包含class路径，还包括jar文件中（class路径）进行查找。
 
 # 防止因为没有bean抛异常
+
 如果没有匹配的 bean ，那么在应用上下文创建的时候， Spring 会抛出一个异常。为了避免异常的出现，你可以将 @Autowired 的 required 属性设置为 false。
+
 # 默认情况下， Spring 中的 bean 都是单例的
