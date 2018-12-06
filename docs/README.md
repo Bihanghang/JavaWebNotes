@@ -73,7 +73,7 @@
 *  [开发插件](notes/工具/开发插件.md)
 *  [杂项](notes/工具/杂项.md)
 
-<details>
+</details>
 
 - 框架 :tshirt:
 
