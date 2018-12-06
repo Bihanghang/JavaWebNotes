@@ -37,19 +37,19 @@ git commit -m "add env"
 git push --set-upstream origin dev
 ```
 
-## 报错remote origin already exist，就需要先删除
+**报错remote origin already exist，就需要先删除**
 
 ```
 git remote rm origin
 ```
 
-## 报错 src refspec master does not match an报,就需要先拉取
+**报错 src refspec master does not match an报,就需要先拉取**
 
 ```
 git pull
 ```
 
-## 合并分支
+**合并分支**
 
 ```
 git checkout master
