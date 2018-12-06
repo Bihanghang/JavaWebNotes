@@ -1,4 +1,4 @@
-[Get Started](#JavaWebNotes)
+- [返回主界面](https://bihanghang.github.io/JavaWebNotes/#/?id=javawebnotes)
 
 - JAVA的一些基本概念
 
