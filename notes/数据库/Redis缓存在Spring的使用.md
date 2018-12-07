@@ -1,6 +1,7 @@
 ## 具体思路
 思路很简单，就是在查询数据的时候，先检查redis数据库中有没有，要是有就把它拿出来，没有就先从mysql中取出来，再存到redis中。主要是利用aop的advisor在查mysql之前做一下判断。
 
+[<font size=5>具体的项目地址</font>](https://github.com/Bihanghang/SSM2)
 ## 1.下载Redis到windows并且修改密码
 [具体请看](https://www.cnblogs.com/bihanghang/p/10018327.html)
 ## 2.整合spring与redis
