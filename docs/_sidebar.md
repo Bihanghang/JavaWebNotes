@@ -15,6 +15,7 @@
 
     * [RestfulAPI](notes/SpringBoot/RestfulAPI)
     * [启动SpringBoot项目](notes/SpringBoot/启动SpringBoot项目)
+    * [SpringBoot整合Netty](notes/SpringBoot/SpringBoot整合Netty.md)
 
 - 前端
 

@@ -1,3 +1,20 @@
+# 下载安装
+**1**.下载Binary zip archive
+**2**.新建环境变量`MAVEN_HOME`，复制Maven安装所在的目录 
+**3**.修改环境变量PATH，追加`%MAVEN_HOME%\bin`
+
+# 基本概念
+groupId 
+
+定义了项目属于哪个组，举个例子，如果你的公司是`mycom`，有一个项目为`myapp`，那么groupId就应该是`com.mycom.myapp`. 
+
+artifacted 
+
+定义了当前maven项目在组中唯一的ID,比如，`myapp-util`,`myapp-domain`,`myapp-web`等。 
+
+# 子模块共享版本号
+可以在父模块中的`dependencyManagement`定义公共依赖, 然后子模块中依赖相应的dependency时，就不用写version字段了，只写groupId跟artifactId就可以了
+
 # 版本号
 可以将版本号定义在properties中
 ```

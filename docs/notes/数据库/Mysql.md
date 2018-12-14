@@ -1,3 +1,22 @@
+## Mysql的下载安装
+[跳转一下]](https://blog.csdn.net/qq_36868342/article/details/78816740)<br>
+老版本的MySql不需要Visual C++的支持,新版本的需要，可以选择老版本简单一些。
+
+## Mysql修改密码
+**1**.找到`C:\Windows\System32`目录下的**cmd.exe**右击以管理员身份打开，输入`net stop mysql`来关闭服务;
+**2**.找到MySql的目录输入`mysqld --skip-grant-tables`以跳过验证。
+**3**.开另外一个命令行窗口，一样进入那个目录
+```sql
+mysql -u root -p
+update mysql.user set password=PASSWORD("新密码") where User="root";
+flush privileges;
+```
+**4**.同第一步,输入`net start mysql`
+
+## 安装Mysql报错**此用户已存在!**
+我是安装了两个`installer`下载器，将其中一个删除运行另一个就会报这个错。<br>
+解决办法:将删除的那个`installer`从回收站还原。
+
 ## limit与offset用法比较
 
 ```

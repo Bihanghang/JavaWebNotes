@@ -14,3 +14,11 @@
 1.确保tomcat下工程项目名称后面有 exploded，如果没有将其移除，选择有这个的。
 
 2.`on ‘update‘ action：` `on frame deactication:`这两个选项都设为Update classes and resources。
+
+# IntelliJ IDEA 注册码
+`C:\Windows\System32\drivers\etc`<br>
+如果在验证上述注册码的过程中，显示注册码已经被取消，则可以通过在hosts文件中，添加：
+```
+0.0.0.0 account.jetbrains.com
+```
+修改文件需要用Notepad++才可以修改成功。
