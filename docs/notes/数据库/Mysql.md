@@ -71,3 +71,5 @@ WHERE
     )
 LIMIT 10;
 ```
+## Mysql5.6以下版本不允许同时设置两个字段为CURRENT_TIMESTAMP
+非要用的话使用触发器

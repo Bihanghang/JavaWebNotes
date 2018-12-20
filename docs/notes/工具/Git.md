@@ -55,3 +55,8 @@ git pull
 git checkout master
 git merge dev
 ```
+## GitLab本地新建的分支与远程分支相关联
+```
+git branch --set-upstream-to=origin/develop develop
+```
+可以先用`git pull`查看当前分支是否与远程分支相关联.
