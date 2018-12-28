@@ -5,7 +5,9 @@
 只能同时处理一个连接，要管理多个并发客户端，需要为每个新的客户端Socket创建一个新的Thread
 
 # 使用Selector的非阻塞I/O
-`class java.nio.channels.Selector`是Java的非阻塞I/O实现的关键。它使用了**事件通知API**以确定在一组非阻塞套接字中有哪些已经就绪能够进行I/O相关的操作。因为可以在任何的时间检查任意的读操作或者写操作的完成状态，一个单一的线程便可以处理多个并发的连接。
+`class java.nio.channels.Selector`是Java的非阻塞I/O实现的关键。<br>
+它使用了**事件通知API**以确定在一组非阻塞套接字中有哪些已经就绪能够进行I/O相关的操作。<br>
+因为可以在任何的时间检查任意的读操作或者写操作的完成状态，一个单一的线程便可以处理多个并发的连接。
 
 # Channel
 Channel 是 Java NIO 的一个基本构造。<br>
@@ -24,3 +26,17 @@ Channel 是 Java NIO 的一个基本构造。<br>
 了手动检查对应的操作是否完成的必要。<br>
 每个 Netty 的出站 I/O 操作都将返回一个 ChannelFuture；也就是说，它们都不会阻塞。
 正如我们前面所提到过的一样，Netty 完全是异步和事件驱动的。
+
+# pipeline
+Each channel has its own pipeline and it is created automatically when a new channel is created.
+
+# Channel的注冊
+在 Netty 中, 每个 Channel 都会关联一个特定的 EventLoop, 并且这个 Channel 中的所有 IO 操作都是在这个 EventLoop 中执行的; 
+
+# bossGroup
+bossGroup 是用于服务端 的 accept 的, 即用于处理客户端的连接请求<br>
+the creator of Netty says multiple boss threads are useful if we share NioEventLoopGroup between different server bootstraps, <br>
+but I don't see the reason for it.
+
+# workerGroup
+workerGroup 负责客户端连接通道的 IO 操作
