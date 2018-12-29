@@ -162,4 +162,4 @@ public class OrderController {
 ```
 `User user = restTemplate.getForObject("http://dis-user/user/getUser", User.class);`这句代码就是远程调用user服务获取信息。
 
-代码比较简单，都放在Github上了https://github.com/Bihanghang/Dis-SpringBoot，有问题希望一起探讨。
+代码比较简单，都放在Github上了[https://github.com/Bihanghang/Dis-SpringBoot](https://github.com/Bihanghang/Dis-SpringBoot)，有问题希望一起探讨。
