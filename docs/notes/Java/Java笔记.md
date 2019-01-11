@@ -210,3 +210,22 @@ public enum Sex {
 而MALE(1,"男")中的1是MALE内部的属性值。
 
 枚举MALE就相当于一个对象，但注意Sex构造器是private，所以MALE只能通过set,get方法赋值取值。
+
+# Map
+Map接口有两个实现，HashMap，TreeMap
+
+## HashMap
+HashMap是无序的，速度较快。常用的方法：
+```java
+for(Map.Entry<String,Enployee> entry:staff.entrySet()){
+	String k = entry.getKey();
+	Employee v = entry.getValue();
+	// do something with k,v
+}
+//java8用法
+counts.foreach((v,k)->{
+	//do something with k,v
+})
+```
+## TreeMap
+TreeMap用键的整体顺序对元素进行排序，并将其组织成搜索树。
