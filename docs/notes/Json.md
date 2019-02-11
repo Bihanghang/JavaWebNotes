@@ -37,6 +37,18 @@ json = JSONUtils.valueToString(jo);
 ```
 JSON.toJSONString(对象)
 ```
+3.将json字符串转化为对象列表
+```java
+String json = "[{\"userId\":\"2\",\"userName\":\"bihang\"},{\"userId\":\"2\",\"userName\":\"bihang\"},{\"userId\":\"2\",\"userName\":\"bihang\"}]";
+List<User> users = JSON.parseObject(json, new TypeReference<List<User>>() {
+});
+```
+4.根据json自动生成对象
+
+http://jsongen.byingtondesign.com/
+
+5.Json映射对象失败多半是因为没有写Get，Set方法。
+
 ## com.fasterxml.jackson
 1.添加依赖
 ```
