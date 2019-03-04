@@ -74,3 +74,11 @@ String json = "";
 ObjectMapper objectMapper = new ObjectMapper();
 json = objectMapper.writeValueAsString(jo);
 ```
+## Gson
+```java
+new Gson().toJson(proxyReq)
+
+new Gson().fromJson(httpResult, new TypeToken<Train_ProxyBookingOrderResponse>() {}.getType()
+
+
+```

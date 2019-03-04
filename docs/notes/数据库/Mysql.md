@@ -73,3 +73,23 @@ LIMIT 10;
 ```
 ## Mysql5.6以下版本不允许同时设置两个字段为CURRENT_TIMESTAMP
 非要用的话使用触发器
+
+## 连接
+就是保持了对称性<br>
+左连接:右边补null<br>
+右连接:左边补null<br>
+内连接:有三种写法:
+```sql
+内连接
+SELECT s.student_name，t.teacher_name FROM student s，teacher t WHERE s.teacher_id = t.id;
+
+SELECT s.student_name，t.teacher_name FROM student s JOIN teacher t ON s.teacher_id = t.id;
+
+SELECT s.student_name，t.teacher_name FROM student INNER JOIN teacher t ON s.teacher_id = t.id;
+```
+全连接:mysql不支持全连接全连接，使用union连接左连接和右连接，得到全连接
+```sql
+SELECT s.student_name，t.teacher_name FROM student s LEFT JOIN teacher t ON s.teacher_id = t.id
+union
+SELECT s.student_name，t.teacher_name FROM student s RIGHT JOIN teacher t ON s.teacher_id = t.id;
+```

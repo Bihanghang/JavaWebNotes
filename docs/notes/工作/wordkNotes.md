@@ -51,3 +51,7 @@ orderNo92181219497248
 无法加载主类，clean一下。
 
 报名序号：13020242
+
+HttpClient addHeader setHeader
+
+泛型方法
