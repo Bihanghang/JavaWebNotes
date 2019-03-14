@@ -165,3 +165,42 @@ student表如果没有self_card这个字段对于pojo类来说是无关紧要的
 一对一还是用上面的&lt;association&gt;
 具体代码请点击[源码](https://github.com/Bihanghang/Mybatis1)
 
+## 批量插入
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ceair.car.order.repository.mapper.coustom.TrainOrderRefundticketSelfMapper">
+    <insert id="insertForeach" parameterType="java.util.List" useGeneratedKeys="true">
+    insert into train_order_refundticket (order_id, trade_id, ticket_id,
+      passenger_name, passenger_idno, sales_price,
+      ticket_price, seat_type_name, tax,
+      ticket_no, status, status_name,
+      refund_remark, is_all_refund, apply_user_id,
+      apply_user_name, create_time, change_time,
+      ticks_timestamp)
+    values
+    <foreach collection="list" item="item" index="index" separator=",">
+        (#{item.orderId,jdbcType=BIGINT}, #{item.tradeId,jdbcType=VARCHAR}, #{item.ticketId,jdbcType=VARCHAR},
+        #{item.passengerName,jdbcType=VARCHAR}, #{item.passengerIdno,jdbcType=VARCHAR}, #{item.salesPrice,jdbcType=DOUBLE},
+        #{item.ticketPrice,jdbcType=DOUBLE}, #{item.seatTypeName,jdbcType=VARCHAR}, #{item.tax,jdbcType=DOUBLE},
+        #{item.ticketNo,jdbcType=VARCHAR}, #{item.status,jdbcType=INTEGER}, #{item.statusName,jdbcType=VARCHAR},
+        #{item.refundRemark,jdbcType=VARCHAR}, #{item.isAllRefund,jdbcType=BIT}, #{item.applyUserId,jdbcType=VARCHAR},
+        #{item.applyUserName,jdbcType=VARCHAR}, #{item.createTime,jdbcType=TIMESTAMP}, #{item.changeTime,jdbcType=TIMESTAMP},
+        #{item.ticksTimestamp,jdbcType=BIGINT})
+    </foreach>
+  </insert>
+</mapper>
+````
+```java
+public interface TrainOrderRefundticketSelfMapper {
+    /**
+     *  功能描述: 批量插入退款条数
+     *  @param: [list]
+     *  @return: int 批量条数
+     *  @auther: BIHANG
+     *  @date: 2019/3/5 14:52
+     */
+    int insertForeach(List<TrainOrderRefundticket> list);
+}
+```
+

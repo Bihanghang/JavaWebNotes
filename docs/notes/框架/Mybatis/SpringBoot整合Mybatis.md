@@ -22,4 +22,9 @@ public class CarOrderWebApplication extends SpringBootServletInitializer {
 	}
 }
 ```
-## 
+## 注意点
+在Spring中，如果自动引入加上static，那么mapper就不能用了。
+
+## Mybatis插入Date类型到Mysql
+插入的时候：需要将util转为sql-->new java.sql.Date(System.currentTimeMillis())<br>
+如果是updateByExampleSelective，直接就可以使用util下的Date。如果此时还是使用sql的Date，精度就会从Timestamp自动转为Date，导致损失精度，很奇怪。

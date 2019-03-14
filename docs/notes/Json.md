@@ -77,8 +77,9 @@ json = objectMapper.writeValueAsString(jo);
 ## Gson
 ```java
 new Gson().toJson(proxyReq)
-
 new Gson().fromJson(httpResult, new TypeToken<Train_ProxyBookingOrderResponse>() {}.getType()
-
-
+```
+1.将Json字符串转换成JsonObject对象：
+```java
+JsonObject returnData = new JsonParser().parse(jsonstr).getAsJsonObject();
 ```

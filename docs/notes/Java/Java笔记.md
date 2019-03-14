@@ -282,4 +282,31 @@ ArrayList<String> lists2 = new ArrayList<String>(){{
 	add("test2");
 }};
 ```
+## 判断手机号码格式是否正确
+```java
+public static boolean IsMobilePhone(String input){
+	return Pattern.matches("^1[34578]\\d{9}$", input);
+}
+```
+## 判断字符串日期格式
+```java
+public static boolean isValidDate(String str) {
+	boolean convertSuccess=true;
+	SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+	try {
+	// 设置lenient为false. 否则SimpleDateFormat会比较宽松地验证日期，比如2007/02/29会被接受，并转换成2007/03/01
+		format.setLenient(false);
+		format.parse(str);
+	} catch (ParseException e) {
+		// e.printStackTrace();
+	// 如果throw java.text.ParseException或者NullPointerException，就说明格式不对
+		convertSuccess=false;
+	}
+	return convertSuccess;
+}
+```
 
+## 当前时间添加13分钟
+```java
+Date date = new Date(new Date().getTime() + Integer.valueOf(carPaySetting.getPayValidityDateTrainOrder()) * 60 * 1000);
+```
