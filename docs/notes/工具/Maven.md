@@ -25,6 +25,7 @@
 * Maven for Java：Maven 插件。
 
 在新建的文件下右击选择Generate from Maven Archetype
+
 # 将Oracle数据库连接jar包加载到Maven本地仓库
 在本地仓库中运行以下命令：
 ```
@@ -38,5 +39,11 @@ mvn install:install-file -DgroupId=com.oracle -DartifactId=ojdbc14 -Dversion=10.
 	<version>10.2.0.1.0</version>
 </dependency>
 ```
-# Maven项目，无法显示src/main/java资源文件夹
+# Eclipse的Maven项目，无法显示src/main/java资源文件夹
 在项目上右键选择properties，然后点击java build path，在Librarys下，编辑JRE System Library，选择workspace default jre就可以了。
+
+# Maven中-DskipTests和-Dmaven.test.skip=true的区别
+在使用mvn package进行编译、打包时，Maven会执行src/test/java中的JUnit测试用例，有时为了跳过测试，会使用参数-DskipTests和-Dmaven.test.skip=true，这两个参数的主要区别是：<br>
+**-DskipTests**，不执行测试用例，但编译测试用例类生成相应的class文件至target/test-classes下。<br>
+**-Dmaven.test.skip=true**，不执行测试用例，也不编译测试用例类。<br>
+`mvn -Dmaven.test.skip=true clean package`就是先清理再生成Jar包
