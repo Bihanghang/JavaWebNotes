@@ -55,6 +55,8 @@ git pull
 git checkout master
 git merge dev
 ```
-# 解决冲突
-Git用`<<<<<<<`，`=======`，`>>>>>>>`标记出不同分支的内容<br>
-如果要解决冲突就是将这些符号删掉，再把文件内容修改为自己想要的样子。
+## GitLab本地新建的分支与远程分支相关联
+```
+git branch --set-upstream-to=origin/develop develop
+```
+可以先用`git pull`查看当前分支是否与远程分支相关联.

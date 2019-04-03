@@ -139,42 +139,6 @@ String是不可变量，线程安全。
 
 StringBuilder线程不安全，StringBuffer线程安全。
 
-# 线程的生命周期六个状态
-
-* New(新创建)
-* Runnable(可运行)
-* Blocked(被阻塞)
-* Waiting(等待)
-* Timed Waiting(计时等待)
-* Terminated(被终止)
-
-## Runnable(可运行)
-
-记住，在任何给定时刻，二个可运行的线程可能正在运行也可能没有运行（这就是为什
-么将这个状态称为可运行而不是运行 )
-。
-## Waiting(等待)
-
-当线程等待另一个线程通知调度器一个条件时
-， 它自己进入等待状态 。 在调用 Object . wait 方法或 Thread . join 方法
-， 或者是等待 java ,
-util . concurrent 库中的 Lock 或 Condition 时 ， 就会出现这种情况
-。
-
-## Terminated(被终止)
-
-线程因如下两个原因之一而被终止 ：
-  * 因为`run`方法正常退出而自然死亡 。
-  * 因为一个没有捕获的异常终止了`run`方法而意外死亡 。
-
-# 线程的3种创建方式
-
-1.继承Thread类创建线程
-
-2.实现Runnable接口创建线程
-
-3.使用Callable和Future创建线程
-
 # ThreadLocal
 
 概括起来说，对于多线程资源共享的问题，同步机制采用了“以时间换空间”的方式：访问串行化，对象共享化。而ThreadLocal采用了“以空间换时间”的方式：访问并行化，对象独享化。前者仅提供一份变量，让不同的线程排队访问，而后者为每一个线程都提供了一份变量，因此可以同时访问而互不影响。
@@ -246,3 +210,103 @@ public enum Sex {
 而MALE(1,"男")中的1是MALE内部的属性值。
 
 枚举MALE就相当于一个对象，但注意Sex构造器是private，所以MALE只能通过set,get方法赋值取值。
+
+# Map
+Map接口有两个实现，HashMap，TreeMap
+
+## HashMap
+HashMap是无序的，速度较快。常用的方法：
+```java
+for(Map.Entry<String,Enployee> entry:staff.entrySet()){
+	String k = entry.getKey();
+	Employee v = entry.getValue();
+	// do something with k,v
+}
+//java8用法
+counts.foreach((v,k)->{
+	//do something with k,v
+})
+```
+## TreeMap
+TreeMap用键的整体顺序对元素进行排序，并将其组织成搜索树。
+
+## BigDecimal
+- Note: the results of this constructor can be somewhat unpredictable. One might assume that new BigDecimal(.1) is exactly equal to .1, but it is actually equal to .10000000000000000555111512312578 27021181583404541015625. This is so because .1 cannot be represented exactly as a double (or, for that matter, as a binary fraction of any finite length). Thus, the long value that is being passed in to the constructor is not exactly equal to .1, appearances notwithstanding.  The (String) constructor, on the other hand, is perfectly predictable: new BigDecimal(".1") is exactly equal to .1,as one would expect. Therefore, it is generally recommended that the (String) constructor be used in preference to this one  
+
+所以想要精确计算，只能用String类型来构造BigDecimal。
+
+精度测试:
+```java
+BigDecimal bigDecimal = new BigDecimal("0.2681097612");
+BigDecimal bigDecimal1 = bigDecimal.setScale(9, RoundingMode.HALF_EVEN);
+ROUND_HALF_EVEN    银行家舍入法
+向“最接近的”数字舍入，如果与两个相邻数字的距离相等，则向相邻的偶数舍入。
+如果舍弃部分左边的数字为奇数，则舍入行为与 ROUND_HALF_UP 相同;
+如果为偶数，则舍入行为与 ROUND_HALF_DOWN 相同。
+注意，在重复进行一系列计算时，此舍入模式可以将累加错误减到最小。
+此舍入模式也称为“银行家舍入法”，主要在美国使用。四舍六入，五分两种情况。
+如果前一位为奇数，则入位，否则舍去。
+以下例子为保留小数点1位，那么这种舍入方式下的结果。
+1.15>1.2 1.25>1.2
+```
+
+## 日期
+
+```java
+/**字符串转时间*/
+String text = "2018-03-04";
+SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");//"yyyy-MM-dd"，很关键不能写成"yyyy-mm-dd" 类似还有"yyyy-MM-dd HH:mm:ss","yyyy/MM/dd HH:mm:ss"
+Date date = sdf.parse(text);
+```
+如果涉及到加减多少天，用LocatDate
+```java
+LocalDate.now();
+LocalDate . of ( 1999 , 12 , 31 );
+LocalDate aThousandDaysLater = newYearsEve . piusDays ( 1000 ) :
+year = aThousandDaysLater . getYearO ； // 2002
+month = aThousandDaysLater . getMonthValueO ; / / 09
+day = aThousandDaysLater . getDayOfMonth () ; // 26
+注意：plusDays 方法会生成一个新的 LocalDate 对象
+```
+## Optional
+```java
+public Date get_createTime() {
+	return Optional.ofNullable(_createTime).orElse(new Date());
+}
+```
+
+## List动态赋值
+```java
+ArrayList<String> lists2 = new ArrayList<String>(){{
+	add("test1");
+	add("test2");
+}};
+```
+## 判断手机号码格式是否正确
+```java
+public static boolean IsMobilePhone(String input){
+	return Pattern.matches("^1[34578]\\d{9}$", input);
+}
+```
+## 判断字符串日期格式
+```java
+public static boolean isValidDate(String str) {
+	boolean convertSuccess=true;
+	SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+	try {
+	// 设置lenient为false. 否则SimpleDateFormat会比较宽松地验证日期，比如2007/02/29会被接受，并转换成2007/03/01
+		format.setLenient(false);
+		format.parse(str);
+	} catch (ParseException e) {
+		// e.printStackTrace();
+	// 如果throw java.text.ParseException或者NullPointerException，就说明格式不对
+		convertSuccess=false;
+	}
+	return convertSuccess;
+}
+```
+
+## 当前时间添加13分钟
+```java
+Date date = new Date(new Date().getTime() + Integer.valueOf(carPaySetting.getPayValidityDateTrainOrder()) * 60 * 1000);
+```

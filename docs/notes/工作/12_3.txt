@@ -1,8 +1,0 @@
-D:\eclipse
-
-https://172.25.17.39:8443/ls/arap/cash/pay/actual/paymentExceptionSettle.do
-
-com.ebao.ls.arap.cash.ctrl.pay.actual.PaymentExceptionSettleAction
-
-/trunk/jsp/ls_web/ls/arap/cash/pay/actual/PaymentExceptionSettlement.jsp
-/trunk/jsp/ls_web/ls/arap/cash/pay/actual/PaymentExceptionSettlementTemp.jsp

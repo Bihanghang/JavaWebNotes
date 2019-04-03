@@ -52,3 +52,20 @@ WHERE
     )
 LIMIT 10;
 ```
+## mysql datetime 数据的自动更新(update_time)和初始化(create_time)
+```sql
+--创建测试表
+CREATE TABLE `test` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(20) DEFAULT NULL,
+  `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `last_modify_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8
+ 
+--检测默认值，插入测试数据
+INSERT INTO timestampTest (name) VALUES ('11'),('22'),('33');
+ 
+--检测自动更新，更新某条数据
+UPDATE timestampTest SET name = '12' WHERE id = 1;
+```
