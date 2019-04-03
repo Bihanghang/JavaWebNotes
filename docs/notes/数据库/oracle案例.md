@@ -141,5 +141,30 @@ where s.sid not in (
         where t.tname = '刘阳')
 );
 ```
+查询有两门以上课程不及格（60）的同学的学号以及平均成绩
+```sql
+select sname,avg(grade)
+from s,sc 
+where s.s#=sc.s# and grade<60
+group by sname
+having count(grade)>=2
+```
+查询学过“011”并且学过编号“002”课程的同学的学号，姓名
+```sql
+SELECT 
+tblstudent.StuId,tblstudent.StuName
+FROM
+(
+SELECT t11.t1sid t33id
+FROM 
+(SELECT t1.StuId t1sid FROM tblscore t1 WHERE t1.CourseId='001')t11,-- 001的学生的id
+(SELECT t1.StuId  t2sid FROM tblscore t1 WHERE t1.CourseId='002')t22-- 002的学生的id
+WHERE 
+t11.t1sid=t22.t2sid
+)t33-- 查出来的是学过“001”并且也学过编号“002”课程的同学的学号
+,
+tblstudent
+WHERE tblstudent.StuId=t33.t33id
+```
 
 
